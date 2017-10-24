@@ -48,11 +48,30 @@ export class MenuPage {
   }
 
   openPage(page: PageInterface) {
-
+    let params = {};
+    if(page.index){
+      params = { tabIndex: page.index};
+    }
+  if(this.nav.getActiveChildNav() && page.index != undefined) {
+    this.nav.getActiveChildNav().select(page.index);
+  } else {
+    this.nav.setRoot(page.pageName, params);
+  }
+  
   }
 
   isActive(page: PageInterface) {
-
+    let childNav = this.nav.getActiveChildNav();
+  
+  if(childNav) {
+    if(childNav.getSelected() && childNav.getSelected().root === page.tabComponent) {
+      return 'primary';
+    }
+    return;
+  }
+  
+  
+  
   }
 
 }
