@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { User } from '../../model/user';
 
 /**
  * Generated class for the LoginPage page.
@@ -14,11 +15,13 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
   templateUrl: 'login.html',
 })
 export class LoginPage {
+  
+  user = {} as User;
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
 
-doLogin() {
+doLogin(user: User) {
   this.navCtrl.setRoot('MenuPage');
 }
 
