@@ -6,7 +6,7 @@ import { CvPage } from '../cv/cv';
 import { ProjectsPage } from '../projects/projects';
 import { ExtraPage } from '../extra/extra';
 import { ContactPage } from '../contact/contact';
-
+// The tabs are defined here Saku Junni 1700009
 @IonicPage()
 @Component({
   selector: 'page-tabs',
@@ -27,7 +27,7 @@ export class TabsPage {
     this.myIndex = navParams.data.tabIndex || 0;
   }
 
-
+// This logs the succesful loading in the browser console
   ionViewDidLoad() {
     console.log('ionViewDidLoad TabsPage');
   }
