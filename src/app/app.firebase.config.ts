@@ -6,3 +6,4 @@ export const FIREBASE_CONFIG = {
     storageBucket: "cvapp-e1a5f.appspot.com",
     messagingSenderId: "669854145821"
   };
+// Here are the credentials and information for the firebase database in one object -Saku Junni 1700009

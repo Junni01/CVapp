@@ -15,7 +15,7 @@ import { AngularFireAuthModule } from 'angularfire2/auth';
   imports: [
     BrowserModule,
     IonicModule.forRoot(MyApp),
-    AngularFireModule.initializeApp(FIREBASE_CONFIG),
+    AngularFireModule.initializeApp(FIREBASE_CONFIG), // This is where the angularfire is initialized with the firebase credentials -Saku Junni 1700009
     AngularFireAuthModule
   ],
   bootstrap: [IonicApp],
