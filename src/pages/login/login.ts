@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { User } from '../../model/user';
+import { AngularFireAuth } from 'angularfire2/auth';
 
 /**
  * This is the login page
@@ -21,11 +22,14 @@ export class LoginPage {
   
   user = {} as User;
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  constructor(private afauth: AngularFireAuth, public navCtrl: NavController, public navParams: NavParams) {
   }
 // this is the function that handles passing the user data to firebase
 doLogin(user: User) {
-  this.navCtrl.setRoot('MenuPage');
+  const result = this.afauth.auth.signInWithEmailAndPassword(user.email, user.password)
+  if (result) {
+    this.navCtrl.setRoot('MenuPage');
+  }
 }
 
 }
