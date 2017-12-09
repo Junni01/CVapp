@@ -43,12 +43,14 @@ async register(user: User) {
           subTitle: 'Credentials created successfully',
           buttons: ['OK']
         });
+        alert.present();
       } else {
         let alert = this.alertCtrl.create({
           title: 'Failure!',
           subTitle: 'Failed to register!',
           buttons: ['OK']
         });
+        alert.present();
 
       }
 
