@@ -6,6 +6,10 @@ import { CvPage } from '../cv/cv';
 import { ProjectsPage } from '../projects/projects';
 import { ExtraPage } from '../extra/extra';
 import { ContactPage } from '../contact/contact';
+import { TechskillsPage } from '../techskills/techskills';
+import { SoftskillsPage } from '../softskills/softskills';
+import { PersonalprojectsPage } from '../personalprojects/personalprojects';
+import { AngularFireAuth } from 'angularfire2/auth';
 
 
 export interface PageInterface {
@@ -32,11 +36,13 @@ export class MenuPage {
   @ViewChild(Nav) nav: Nav;
 // here's the page interface with many pages using the tabspage-page. More icons to check out.
   pages: PageInterface[] = [
-    { title: 'About', pageName: 'TabsPage', tabComponent: 'AboutPage', index: 0, icon: 'glasses'},
-    {title: 'CV', pageName: 'TabsPage', tabComponent: 'CvPage', index: 1, icon: 'document'},
-    {title: 'Project Work', pageName: 'TabsPage', tabComponent: 'ProjectsPage', index: 2, icon: 'flag'},
-    {title: 'Extra', pageName: 'TabsPage', tabComponent: 'ExtraPage', index: 3, icon: 'archive'},
-    {title: 'Contact', pageName: 'TabsPage', tabComponent: 'ContactPage', index: 4, icon: 'contact'},
+    { title: 'Personal Profile', pageName: 'TabsPage', tabComponent: 'AboutPage', index: 0, icon: 'glasses'},
+    {title: 'Technical Skills', pageName: 'TabsPage', tabComponent: 'CvPage', index: 1, icon: 'document'},
+    {title: 'Soft Skills', pageName: 'TabsPage', tabComponent: 'SoftskillsPage', index: 2, icon: 'flag'},
+    {title: 'Personal project', pageName: 'TabsPage', tabComponent: 'PersonalprojectsPage', index: 3, icon: 'archive'},
+    {title: 'Team Project', pageName: 'TabsPage', tabComponent: 'ProjectsPage', index: 4, icon: 'contact'},
+    {title: 'Extra Curriculum activities', pageName: 'TabsPage', tabComponent: 'ExtraPage', index: 5, icon: 'contact'},
+    {title: 'Contact', pageName: 'TabsPage', tabComponent: 'ContactPage', index: 6, icon: 'contact'},
   ]
 
 
@@ -44,7 +50,7 @@ export class MenuPage {
 
 
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  constructor(public navCtrl: NavController, public navParams: NavParams, private afauth: AngularFireAuth) {
   }
 
   openPage(page: PageInterface) {
@@ -69,9 +75,14 @@ export class MenuPage {
     }
     return;
   }
+
+
   
-  
-  
+  }
+
+  public logout() {
+    this.afauth.auth.signOut
+    this.nav.setRoot('LoginPage');
   }
 
 }

@@ -4,16 +4,26 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 
 @IonicPage()
 @Component({
-  selector: 'page-projects',
-  templateUrl: 'projects.html',
+  selector: 'page-welcome',
+  templateUrl: 'welcome.html',
 })
-export class ProjectsPage {
+export class WelcomePage {
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
 
   ionViewDidLoad() {
-    console.log('ionViewDidLoad ProjectsPage');
+    console.log('ionViewDidLoad WelcomePage');
   }
 
+
+
+moveOn() {
+      this.navCtrl.setRoot('LoginPage');
+    }
+
+
+
+
 }
+
