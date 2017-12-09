@@ -9,7 +9,9 @@
 
 // here are the inputs that capture the email and password and button that runs the doLogin function Saku Junni 1700009
 <ion-content padding>
-    <ion-row>
+    
+ <H1>LOGIN</H1> 
+  <ion-row>
         <ion-col>
           <ion-list inset>            
             <ion-item>
@@ -25,5 +27,32 @@
       </ion-row>
 
 <button ion-button full (click)="doLogin(user)"> Login </button>
+
+<H1>REGISTER</H1>
+      <ion-row>
+      <ion-col>
+        <ion-list inset>
+          
+          <ion-item>
+            <ion-input type="text" placeholder="Email" name="email" [(ngModel)]="user.email" required></ion-input>
+          </ion-item>
+          
+          <ion-item>
+            <ion-input type="password" placeholder="Password" name="password" [(ngModel)]="user.password" required></ion-input>
+          </ion-item>
+          
+        </ion-list>
+      </ion-col>
+    </ion-row>
+    
+    <ion-row>
+      <ion-col class="signup-col">
+        <button ion-button class="submit-btn" full type="submit" (click)="register(user)">Register</button>
+      </ion-col>
+    </ion-row>
+
+
+
+
 <p>Demo credentials Login: test@test.com password: test123</p>
 </ion-content>

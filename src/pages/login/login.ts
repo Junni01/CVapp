@@ -32,4 +32,18 @@ doLogin(user: User) {
   }
 }
 
+async register(user: User) {
+  
+    const result2 = await this.afauth.auth.createUserWithEmailAndPassword(user.email, user.password);
+  
+      if (result2) {
+        
+      }
+    }
+    
+}
+
+
+
+
 }
