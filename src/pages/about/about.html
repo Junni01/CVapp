@@ -6,14 +6,14 @@
       </button>
     </ion-buttons>
     <ion-title>
-      About
+      Personal Profile
     </ion-title>
   </ion-navbar>
 </ion-header>
 // A link to a picture and some information using the ionic data card objects -Saku Junni 1700009
-<ion-content padding>
+<ion-content id="content" padding>
 <img src="http://personal.inet.fi/peli/junni/saku.jpg" height="200">
-  <ion-card>
+  <ion-card class="card">
     <ion-card-header>
       Personal Information
     </ion-card-header>
@@ -24,7 +24,7 @@
 
 
 
-<ion-card>
+<ion-card class="card">
     <ion-card-header>
       Name
     </ion-card-header>
@@ -32,7 +32,7 @@
     Saku Junni
   </ion-card-content>
 </ion-card>
-  <ion-card>
+  <ion-card class="card">
       <ion-card-header>
         Date of Birth
       </ion-card-header>
@@ -40,7 +40,7 @@
       16.05.1986
     </ion-card-content>
   </ion-card>
-<ion-card>
+<ion-card class="card">
         <ion-card-header>
           Education
         </ion-card-header>
@@ -49,7 +49,7 @@
       </ion-card-content>
     </ion-card>
 
-<ion-card>
+<ion-card class="card">
   <ion-card-header>
     Hobbies
   </ion-card-header>
@@ -58,4 +58,25 @@
   Boardgames
 </ion-card-content>
 </ion-card>
+<h1>My Job History:</h1>
+<ion-list>
+
+    <ion-item>
+        <h2>Recair Oyj</h2>
+        <h3>05/2017-Present</h3>
+        <p>ERP implementation</p>
+      </ion-item>
+      <ion-item>
+          <h2>Dekra Oy</h2>
+          <h3>05/2015-10/2016</h3>
+          <p>NDT-inspection and documentation</p>
+        </ion-item>
+        <ion-item>
+            <h2>Kaskein Marja Oy</h2>
+            <h3>2010-2014</h3>
+            <p>Logistics and warehouse manegement</p>
+          </ion-item>
+  </ion-list>      
+
+
 </ion-content>

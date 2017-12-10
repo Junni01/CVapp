@@ -1,3 +1,8 @@
 page-cv {
-
+    #content {   background: -webkit-linear-gradient(blue, lightblue);
+        background: -o-linear-gradient(blue, lightblue);
+        background: -moz-linear-gradient(blue, lightblue);
+        background: linear-gradient(blue, lightblue); }
+    
+    .card { background: rgb(231, 249, 255) }
 }

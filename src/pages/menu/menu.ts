@@ -38,10 +38,10 @@ export class MenuPage {
   pages: PageInterface[] = [
     { title: 'Personal Profile', pageName: 'TabsPage', tabComponent: 'AboutPage', index: 0, icon: 'glasses'},
     {title: 'Technical Skills', pageName: 'TabsPage', tabComponent: 'CvPage', index: 1, icon: 'document'},
-    {title: 'Soft Skills', pageName: 'TabsPage', tabComponent: 'SoftskillsPage', index: 2, icon: 'flag'},
-    {title: 'Personal project', pageName: 'TabsPage', tabComponent: 'PersonalprojectsPage', index: 3, icon: 'archive'},
-    {title: 'Team Project', pageName: 'TabsPage', tabComponent: 'ProjectsPage', index: 4, icon: 'contact'},
-    {title: 'Extra Curriculum activities', pageName: 'TabsPage', tabComponent: 'ExtraPage', index: 5, icon: 'contact'},
+    {title: 'Soft Skills', pageName: 'TabsPage', tabComponent: 'SoftskillsPage', index: 2, icon: 'chatboxes'},
+    {title: 'Personal project', pageName: 'TabsPage', tabComponent: 'PersonalprojectsPage', index: 3, icon: 'brush'},
+    {title: 'Team Project', pageName: 'TabsPage', tabComponent: 'ProjectsPage', index: 4, icon: 'briefcase'},
+    {title: 'Extra Curriculum activities', pageName: 'TabsPage', tabComponent: 'ExtraPage', index: 5, icon: 'american-football'},
     {title: 'Contact', pageName: 'TabsPage', tabComponent: 'ContactPage', index: 6, icon: 'contact'},
   ]
 

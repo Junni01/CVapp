@@ -8,9 +8,8 @@
 </ion-header>
 
 // here are the inputs that capture the email and password and button that runs the doLogin function Saku Junni 1700009
-<ion-content padding>
-
- <H1>LOGIN</H1>
+<ion-content id="content" padding>
+<div>
   <ion-row>
         <ion-col>
           <ion-list inset>
@@ -26,17 +25,12 @@
         </ion-col>
       </ion-row>
 
-<button ion-button round color="light" (click)="doLogin(user)"> Login </button>
-
-<H1>REGISTER</H1>
-    <ion-row>
-      <ion-col class="signup-col">
-        <button ion-button round color="light" class="submit-btn" full type="submit" (click)="register(user)">Register</button>
-      </ion-col>
-    </ion-row>
+<button ion-button round color="light" full (click)="doLogin(user)"> Login </button>
+<button ion-button round color="light" full (click)="register(user)"> Register </button>
 
 
 
 
 <p>Demo credentials Login: test@test.com password: test123</p>
+</div>
 </ion-content>

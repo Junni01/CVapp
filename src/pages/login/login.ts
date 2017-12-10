@@ -7,9 +7,10 @@ import { AlertController } from 'ionic-angular';
 /**
  * This is the login page
  * the user model is used to gather data an pass it to firebase
- * Right now the login only accepts the default email and password that
- * navigates the user to the menupage and let's him access the app
- * pretty simple stuff, no register page at the moment since it was not required
+ * It now also features a register function that creates credentials to the firebase database.
+ * 
+ * 
+ * 
  * Saku Junni 1700009
  */
 
@@ -32,7 +33,7 @@ doLogin(user: User) {
     this.navCtrl.setRoot('MenuPage');
   }
 }
-
+// This function passes the register data to the database and displays a popup to inform the user if it was successful or not.
 async register(user: User) {
 
     const result2 = await this.afauth.auth.createUserWithEmailAndPassword(user.email, user.password);
